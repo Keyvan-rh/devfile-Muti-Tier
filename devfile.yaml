@@ -1,20 +1,18 @@
-schemaVersion: 2.1.0
+schemaVersion: 2.2.0
 metadata:
-  name: petclinic-dev-environment
+  name: example-devfile
   version: 1.0.0
 projects:
-  - name: kiosk-backend
+  - name: frontend
     git:
       remotes:
-        origin: "https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git"
-      checkoutFrom:
-        revision: main
-  - name: kiosk-ui
+        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git'
+  - name: backend
     git:
       remotes:
-        origin: "https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git"
-      checkoutFrom:
-        revision: main
+        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'
+        
+        
   
         
         
