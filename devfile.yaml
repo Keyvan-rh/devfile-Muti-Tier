@@ -3,9 +3,18 @@ metadata:
   name: petclinic-dev-environment
   version: 1.0.0
 projects:
-  - name: petclinic
+  - name: kiosk-backend
     git:
       remotes:
-        origin: "https://github.com/spring-projects/spring-petclinic.git"
+        origin: "https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git"
       checkoutFrom:
         revision: main
+  - name: kiosk-ui
+    git:
+      remotes:
+        origin: "https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git"
+      checkoutFrom:
+        revision: main
+  
+        
+        
