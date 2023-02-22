@@ -2,6 +2,8 @@ schemaVersion: 2.2.0
 metadata:
   name: example-devfile
   version: 1.0.0
+attributes:
+  controller.devfile.io/storage-type: ephemeral
 projects:
   - name: frontend
     git:
