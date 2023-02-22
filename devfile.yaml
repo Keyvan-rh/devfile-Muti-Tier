@@ -34,6 +34,9 @@ components:
       memoryLimit: 6G
       mountSources: true
       sourceMapping: /projects
+  - name: m2
+    volume:
+      size: 1G
   
         
         
