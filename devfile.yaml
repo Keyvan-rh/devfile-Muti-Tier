@@ -10,32 +10,7 @@ projects:
   - name: backend
     git:
       remotes:
-        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'
-components:
-  - name: postgresdb
-    container:
-      image: docker.io/library/postgres:latest
-      memoryLimit: 1Gi
-      endpoints:
-        - exposure: none
-          name: db
-          protocol: tcp
-          targetPort: 5432
-      env:
-        - name: POSTGRES_USER
-          value: apiserver
-        - name: POSTGRES_PASSWORD
-          value: apiserver
-        - name: POSTGRES_DB
-          value: postgres
-        - name: PGDATA
-          value: /var/lib/postgresql/data/pgdata
-      volumeMounts:
-        - name: pgsqldata
-          path: /var/lib/postgresql/data
-  - name: pgsqldata
-    volume:
-      size: 1Gi     
+        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'    
         
   
         
