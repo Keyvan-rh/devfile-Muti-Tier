@@ -6,11 +6,11 @@ projects:
   - name: frontend
     git:
       remotes:
-        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'
+        origin: 'https://github.com/Keyvan-rh/kiosk-frontend.git'
   - name: backend
     git:
       remotes:
-        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git'
+        origin: 'https://github.com/Keyvan-rh/kiosk-backend.git'
 components:
   - name: nodejs
     container:
