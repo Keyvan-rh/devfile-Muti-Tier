@@ -6,21 +6,23 @@ projects:
   - name: frontend
     git:
       remotes:
-        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git'
+        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'
   - name: backend
     git:
       remotes:
-        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'
+        origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git'
 components:
   - name: nodejs
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.4
       env:
       # The values below are used to set up the environment for running the application
-        - name: SECRET
-          value: 220fd770-c028-480d-8f95-f84353c7d55a 
-        - name: NODE_ENV
-          value: production
+        - name: user
+          value: user
+        - name: password
+          value: password
+        - name: database_name
+          value: kiosk
       endpoints:
         - exposure: public
           name: nodejs
@@ -42,7 +44,7 @@ components:
         - name: MONGODB_PASSWORD
           value: password
         - name: MONGODB_DATABASE
-          value: order
+          value: kiosk
         - name: MONGODB_ADMIN_PASSWORD
           value: password
       endpoints:
