@@ -12,29 +12,25 @@ projects:
       remotes:
         origin: 'https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git'
 components:
-  - name: universal-developer-image
+  - name: nodejs
     container:
-      image: 'registry.redhat.io/devspaces/udi-rhel8@sha256:8de469cc9131a42092bd66e0f27a52bbc9b9a449235abf5b900d172a1bd3c985'
+      image: registry.redhat.io/devspaces/udi-rhel8:3.4
       env:
-        - name: QUARKUS_HTTP_HOST
-          value: 0.0.0.0
+      # The values below are used to set up the environment for running the application
+        - name: SECRET
+          value: 220fd770-c028-480d-8f95-f84353c7d55a 
+        - name: NODE_ENV
+          value: production
       endpoints:
-        - exposure: none
-          name: debug
-          protocol: tcp
-          targetPort: 5005
         - exposure: public
-          name: list-all-food
-          protocol: http
+          name: nodejs
           targetPort: 8080
-          path: /food
-      volumeMounts:
-        - name: m2
-          path: /home/user/.m2
-      memoryLimit: 6G
+      memoryLimit: 1G
       mountSources: true
-      sourceMapping: /projects
-  - name: m2
+      volumeMounts:
+        - name: npm
+          path: /home/user/.npm
+  - name: npm
     volume:
       size: 1G
   - name: mongo
