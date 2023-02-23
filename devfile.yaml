@@ -32,12 +32,12 @@ components:
       volumeMounts:
         - name: npm
           path: /home/user/.npm
-        - name: npm_modules
+        - name: npm-modules
           path: /usr/local/lib/node_modules
   - name: npm
     volume:
       size: 1G
-  - name: npm_modules
+  - name: npm-modules
     volume:
       size: 5G
   - name: mongo
