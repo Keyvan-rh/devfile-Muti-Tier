@@ -32,9 +32,15 @@ components:
       volumeMounts:
         - name: npm
           path: /home/user/.npm
+      volumeMounts:
+        - name: npm_modules
+          path: /usr/local/lib/node_modules
   - name: npm
     volume:
       size: 1G
+  - name: npm_modules
+    volume:
+      size: 5G
   - name: mongo
     container:
       image: registry.redhat.io/rhscl/mongodb-36-rhel7:1-50
