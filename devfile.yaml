@@ -32,7 +32,6 @@ components:
       volumeMounts:
         - name: npm
           path: /home/user/.npm
-      volumeMounts:
         - name: npm_modules
           path: /usr/local/lib/node_modules
   - name: npm
