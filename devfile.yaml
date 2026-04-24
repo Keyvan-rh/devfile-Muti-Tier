@@ -14,7 +14,7 @@ projects:
 components:
   - name: nodejs
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.4
+      image: registry.redhat.io/devspaces/udi-rhel9
       env:
       # The values below are used to set up the environment for running the application
         - name: user
