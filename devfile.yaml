@@ -3,6 +3,10 @@ metadata:
   name: multi-tier-test
   version: 1.0.0
 projects:
+  - name: workspace
+    git:
+      remotes:
+        origin: 'https://github.com/Keyvan-rh/devfile-Muti-Tier.git'
   - name: frontend
     git:
       remotes:
